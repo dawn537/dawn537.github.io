@@ -1,222 +1,37 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  
-  <title>To LYX | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Time: 2020&#x2F;11&#x2F;10 近两天可好，没太敢去找你，也是想让你我都好好冷静下，   周四那天跟你聊了很多，准确说是你跟我聊了很多。说是我有很多话想跟你说，到最后也没说出来多少。这几天我一直在想你跟我说的话，也在回忆过去 审视着这段关系、感情。    其实最开始我朋友说 你这很难啊 虽然同城但是跟异地有什么区别呢 我笑了笑没回他 我觉得这只是暂时的 我会回到中关村的 距离也不会是问题的。 就">
-<meta property="og:type" content="article">
-<meta property="og:title" content="To LYX">
-<meta property="og:url" content="http://example.com/2020/11/13/To-LYX/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Time: 2020&#x2F;11&#x2F;10 近两天可好，没太敢去找你，也是想让你我都好好冷静下，   周四那天跟你聊了很多，准确说是你跟我聊了很多。说是我有很多话想跟你说，到最后也没说出来多少。这几天我一直在想你跟我说的话，也在回忆过去 审视着这段关系、感情。    其实最开始我朋友说 你这很难啊 虽然同城但是跟异地有什么区别呢 我笑了笑没回他 我觉得这只是暂时的 我会回到中关村的 距离也不会是问题的。 就">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-11-13T04:43:55.000Z">
-<meta property="article:modified_time" content="2020-11-13T04:46:18.895Z">
-<meta property="article:author" content="John Doe">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 5.2.0"></head>
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-To-LYX" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/13/To-LYX/" class="article-date">
-  <time datetime="2020-11-13T04:43:55.000Z" itemprop="datePublished">2020-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      To LYX
-    </h1>
-  
+{% block page_class %}page-post-detail{% endblock %}
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Time: 2020/11/10</p>
-<p>近两天可好，没太敢去找你，也是想让你我都好好冷静下，</p>
-<p>  周四那天跟你聊了很多，准确说是你跟我聊了很多。说是我有很多话想跟你说，到最后也没说出来多少。这几天我一直在想你跟我说的话，也在回忆过去 审视着这段关系、感情。</p>
-<p>   其实最开始我朋友说 你这很难啊 虽然同城但是跟异地有什么区别呢 我笑了笑没回他 我觉得这只是暂时的 我会回到中关村的 距离也不会是问题的。 就像你说的一样，开始稳定的见面 真的是那段时间最快乐 最治愈的时光。每次刚分开就期待着下一次。不止一次的想我要在中关村该多好呀。或许这就是热恋期吧。更令我高兴的是虽然我们都兴趣爱好区别很大，但是我俩真的好像好像啊！就觉得你也应该很开心吧 想着能追到你真好。事实也证明我们真的很像，我也是一个很不想麻烦的人，不喜欢翻旧账 为了琐事跟人争吵。这可能跟我爸有关系吧，我爸每次吵我总喜欢翻旧账，还乐此不疲。hh 但是这样的代价的很明显，我在朋友之中总是扮演一个倾听者的角色，很少跟人谈起我怎么怎么样。</p>
-<p>  纵使两个人再合拍，也少不了摩擦跟不愉快。感情中总是少不了磨合期，你我原来都想把问题自己消化，这显然不行，我也不想克制自己了，这次就让我来，好吗</p>
-<p>   观念确实或多或少受到父母的影响，但一个人的三观不是只由父母塑造，点点滴滴都在影响，你在影响我，我也在影响你。想想我们还没有过这种交心长谈，就可以相互喜欢这么久。这也算是我的一次彻底交心吧，我也不想隐瞒什么。</p>
-<p>   周四你问我 你有没有做过什么让我不舒服的事情， 显然有的，有时候我确实很大条，把自己包装的刀枪不入，谁又能不疼呢 又回到了最初的信息差，我一直都觉得是我追的你，有那么几次让我觉得你可能没有那么喜欢我，其实最开始你答应我的时候我就有那么一丢丢的疑惑。 我其实是的很抗拒上镜的人，虽然喜欢摄影，但是不喜欢入镜。 但是我想和你拍照呀，第一次还是我偷拍的两个人的影子。你总是会分享你们宿舍的照片，但是你没有说过想跟我拍照，在地铁 香山都是我提出的，给我感觉你并不想跟我合照，想想自己为什么当时不直说呢，可能是心底里怕失去你吧，然而这是你我理所应当的权力呀，现在能说出来也挺开心的，希望你也能告诉我，你男朋友有时候确实很迟钝。 然后你发香山的朋友圈里没有我或者说只有头上的小风车，不知道当时自己咋想的，就更加印证了自己的想法。</p>
-<p>   你问我为什么不发朋友圈，说出来有些丢人，因为这些种种让我不敢。</p>
-<p>   然而你挽住我胳膊的那几次我真的好开心好开心，我在你校体测那次，咱俩吃完午饭回教室的时候碰到了我同学，你抱紧我胳膊那下，我真的是乐了花！ 当时就觉得她可能是真的喜欢我的吧，之后我想买情侣装你没理会我，种种让我反复横跳。可能有些不可理喻，不像我做的事吧。其实我一直想抓个娃娃给你，但是每次路过娃娃机我看你都没什么兴致。我也就没说什么。</p>
-<p>  当然还有很多你不知道，我都想告诉你，希望你也能告诉我。答应你唱歌给你听的事我也一直都记得，我甚至都有找朋友教我唱歌，虽然现在在ktv还是不太拿得起麦克风吧，但我相信我可以。疫情在家时候我一直在家做饭，不全是帮家里干活，也是想着以后能做饭给你吃。想着能一起拍照，一起去逛街，一起去ktv，一起去宜家，一起去长沙，一起去喝茶颜悦色，一起去看星星，一起去……</p>
-<p>  结婚有七年之痒，爱情也有磨合期，世界上没有完全合拍的两个人，但可以变得合拍的两个人，何况我们已经这么合拍了呢。向我倾诉，提要求是你理所应当的权力，我也一样，很难过这段时间成了你的“负担”，我相信我们未来能比过去更美好，我已经迈出了这一步，这些算是我彻底的交心了。</p>
-<p>  你也不用着急回复我什么，我只是想让你知道我是怎么想的 我还是想跟你走下去的，我也相信我们可以走下去的。</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/13/To-LYX/" data-id="ckhfs429a0000nsvtc87m2pth" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2020/11/16/%E2%80%9C%E6%9D%82%E8%AE%B0-2020-11-16%E2%80%9D/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          “杂记_2020/11/16”
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2020/11/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+{% block content %}
 
-  
-</article>
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
     </div>
   </div>
 
+{% endblock %}
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/11/16/%E2%80%9C%E6%9D%82%E8%AE%B0-2020-11-16%E2%80%9D/">“杂记_2020/11/16”</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/13/To-LYX/">To LYX</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/11/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
-</body>
-</html>
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}
